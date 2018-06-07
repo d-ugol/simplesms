@@ -1,0 +1,29 @@
+<h1 align="center">Welcome to SimpleSMS</h1>
+
+
+
+<% if flash[:error] %>
+  <div class='error'><%= flash[:error] %></div>
+<% end -%>
+
+<% if flash[:notice] %>
+  <div class='notice'><%= flash[:notice] %></div>
+<% end -%>
+
+
+
+<form action="/sms/send" method="post">
+
+	<p>
+		Phone Number: <br/>
+		<input type="text" name="phone" value=""/>
+	</p>
+
+	<p>
+		Text Message: <br/>
+		<textarea name="message" rows="10" cols="30"></textarea>
+	</p>
+
+	<input type="submit" value="Send">
+
+</form>
